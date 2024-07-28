@@ -1,0 +1,72 @@
+:root {
+   --snow: url("./images/snow.jpg");
+   --rain: url("./images/rain.jpg");
+   --fog: url("./images/fog.jpg");
+   --wind: url("./images/wind.jpg");
+   --cloudy: url("./images/cloudy.jpg");
+   --partly-cloudy-day: url("./images/partly-cloudy-day.jpg");
+   --partly-cloudy-night: url("./images/partly-cloudy-night.jpg");
+   --clear-day: url("./images/clear-day.jpg");
+   --clear-night: url("./images/clear-night.jpg");
+}
+
+body {
+   margin: 0;
+}
+
+.page-wrapper {
+   position: relative;
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+}
+
+form {
+   top: 55vh;
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 15px;
+   z-index: 3;
+}
+
+.weather-wrapper {
+   position: relative;
+   width: 100vw;
+   height: 100vh;
+   padding-top: 10vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   z-index: 2;
+}
+
+#weather-background {
+   position: absolute;
+   width: 100vw;
+   height: 100vh;
+   z-index: 1;
+   background-size: cover;
+   background-position: center;
+   filter: blur(5px);
+}
+
+.today-info {
+   width: 70%;
+   text-align: center;
+}
+
+#loading {
+   display: none;
+}
+
+#weather-background, #location-heading, #today-info {
+   transition: opacity 0.5s ease-in-out;
+   opacity: 0; /* Initially hidden */
+}
